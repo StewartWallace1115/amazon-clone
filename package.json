@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "test:unit": "vitest -t unit",
+    "test:unit": "vitest unit",
     "test:component": "vitest component",
     "test:e2e": "playwright test",
+    "test:all": "vitest run unit && vitest run component && playwright test",
+
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
